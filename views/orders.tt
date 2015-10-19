@@ -25,7 +25,7 @@
     <% IF admin %>
     <td>
         <form name="form_server">
-          <input type="button" <% UNLESS order.served %> disabled=1 <% END %> name="serve" value="Serve" onClick="form_patch('<% order.id %>'); return false;"/>
+          <input type="button" <% IF order.served %> disabled=1 <% END %> name="serve" value="Serve" onClick="form_patch('<% order.id %>'); return false;"/>
         </form>
     </td>
     <td>
