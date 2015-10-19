@@ -30,7 +30,7 @@
     </td>
     <td>
         <form name="form_cancel">
-          <input type="submit" <% UNLESS order.served %> disabled=1 <% END %> name="delete" value="Delete" onClick="form_delete('<% order.id %>'); return false;"/>
+          <input type="submit" <% IF order.served %> disabled=1 <% END %> name="delete" value="Delete" onClick="form_delete('<% order.id %>'); return false;"/>
         </form>
     </td>
     <% END %>
